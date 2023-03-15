@@ -1,0 +1,472 @@
+/* @mixin delay {
+    -webkit-transition-delay: ($i * 0.12s) + 0.2s;
+    -moz-transition-delay: ($i * 0.12s) + 0.2s;
+    -o-transition-delay: ($i * 0.12s) + 0.2s;
+    transition-delay: ($i * 0.12s) + 0.2s;
+} */
+:root {
+  --head-pad: calc(1em + .25em);
+  --lg-f-size: 1.4em;
+  --h1-style: italic;
+}
+
+h3, h3:before {
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 25px;
+  font-family: Arial;
+  font-weight: 470;
+}
+h3:before {
+  -webkit-animation: txtload 3s forwards ease 3s;
+  animation: txtload 3s forwards ease 3s;
+  content: "";
+}
+
+.show-cover {
+  transform: translateY(0%) !important;
+}
+
+p, blockquote {
+  text-align: center;
+  word-spacing: 3px;
+  font-family: "Lucida Sans Regular", Verdana, sans-serif;
+}
+
+@-webkit-keyframes txtload {
+  5% {
+    content: "W";
+  }
+  10% {
+    content: "We";
+  }
+  15% {
+    content: "Web";
+  }
+  20% {
+    content: "Web";
+  }
+  25% {
+    content: "Web H";
+  }
+  30% {
+    content: "Web Ho";
+  }
+  35% {
+    content: "Web Hos";
+  }
+  40% {
+    content: "Web Host";
+  }
+  45% {
+    content: "Web Hosti";
+  }
+  50% {
+    content: "Web Hostin";
+  }
+  53% {
+    content: "Web Hosting";
+  }
+  56% {
+    content: "Web Hosting F";
+  }
+  59% {
+    content: "Web Hosting Fo";
+  }
+  62% {
+    content: "Web Hosting For";
+  }
+  65% {
+    content: "Web Hosting For T";
+  }
+  68% {
+    content: "Web Hosting For Th";
+  }
+  71% {
+    content: "Web Hosting For The";
+  }
+  74% {
+    content: "Web Hosting For The M";
+  }
+  77% {
+    content: "Web Hosting For The Mo";
+  }
+  80% {
+    content: "Web Hosting For The Mod";
+  }
+  83% {
+    content: "Web Hosting For The Mode";
+  }
+  85% {
+    content: "Web Hosting For The Moder";
+  }
+  88% {
+    content: "Web Hosting For The Modern";
+  }
+  91% {
+    content: "Web Hosting For The Modern E";
+  }
+  95% {
+    content: "Web Hosting For The Modern Er";
+  }
+  100% {
+    content: "Web Hosting For The Modern Era";
+  }
+}
+
+@keyframes txtload {
+  5% {
+    content: "W";
+  }
+  10% {
+    content: "We";
+  }
+  15% {
+    content: "Web";
+  }
+  20% {
+    content: "Web";
+  }
+  25% {
+    content: "Web H";
+  }
+  30% {
+    content: "Web Ho";
+  }
+  35% {
+    content: "Web Hos";
+  }
+  40% {
+    content: "Web Host";
+  }
+  45% {
+    content: "Web Hosti";
+  }
+  50% {
+    content: "Web Hostin";
+  }
+  53% {
+    content: "Web Hosting";
+  }
+  56% {
+    content: "Web Hosting F";
+  }
+  59% {
+    content: "Web Hosting Fo";
+  }
+  62% {
+    content: "Web Hosting For";
+  }
+  65% {
+    content: "Web Hosting For T";
+  }
+  68% {
+    content: "Web Hosting For Th";
+  }
+  71% {
+    content: "Web Hosting For The";
+  }
+  74% {
+    content: "Web Hosting For The M";
+  }
+  77% {
+    content: "Web Hosting For The Mo";
+  }
+  80% {
+    content: "Web Hosting For The Mod";
+  }
+  83% {
+    content: "Web Hosting For The Mode";
+  }
+  85% {
+    content: "Web Hosting For The Moder";
+  }
+  88% {
+    content: "Web Hosting For The Modern";
+  }
+  91% {
+    content: "Web Hosting For The Modern E";
+  }
+  95% {
+    content: "Web Hosting For The Modern Er";
+  }
+  100% {
+    content: "Web Hosting For The Modern Era";
+  }
+}
+img.close {
+  position: absolute;
+  right: 40px;
+  top: 15px;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+}
+img.close:hover {
+  background: #3d3e41;
+}
+
+:root {
+  --h1-col: #1EBCCE;
+  --header-bg: rgb(255, 255, 255);
+  --body-bg: #fdfdfd;
+}
+
+body {
+  font-family: "Arial", Menlo;
+}
+body header {
+  background: var(--header-bg);
+  padding: var(--head-pad);
+  display: flex;
+  justify-content: flex-end;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+body ul {
+  list-style: none;
+}
+body ul li {
+  position: relative;
+  display: inline;
+  margin: 16px;
+}
+body ul li a {
+  text-decoration: none;
+  color: hsl(186deg, 70%, 40%);
+  transition: all 200ms ease;
+  font-size: 1.12rem;
+}
+body ul li a:hover {
+  color: #1EBCCE;
+}
+body div.hero-img {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  top: 6.2em;
+  gap: 1.2em;
+}
+body div.hero-img img.cent {
+  z-index: -2;
+  width: clamp(400px - 6em, 400px + 4em, 400px + 3vw);
+  -webkit-animation: Load-Img 3s forwards linear;
+  animation: Load-Img 3s forwards linear;
+}
+body div.hero-img img.stream {
+  width: calc(40px + 3em);
+}
+body section.tasks {
+  background: var(--h1-col);
+  margin-top: 6em;
+  width: 100%;
+}
+@media only screen and (min-width: 1200px) {
+  body section.tasks {
+    border-radius: 2em;
+  }
+}
+body section.tasks div.grid_cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  -moz-column-gap: 1.3em;
+       column-gap: 1.3em;
+  row-gap: 5em;
+  padding-top: calc(40px + 2em);
+  padding-bottom: calc(40px + 2em);
+}
+body section.tasks div.first-Cont, body section.tasks div.sec-Cont, body section.tasks div.thrd-Cont {
+  border-radius: 20px;
+  width: 300px;
+  position: relative;
+  color: #fff;
+}
+@media only screen and (max-width: 630px) {
+  body section.tasks div.first-Cont, body section.tasks div.sec-Cont, body section.tasks div.thrd-Cont {
+    width: 40%;
+  }
+}
+body section.tasks div.first-Cont:before, body section.tasks div.sec-Cont:before, body section.tasks div.thrd-Cont:before {
+  content: "";
+  position: absolute;
+  background: url(/image/after_bg.svg);
+  background-size: 100% 100%;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  top: -25px;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+}
+body section.tasks div.first-Cont blockquote, body section.tasks div.sec-Cont blockquote, body section.tasks div.thrd-Cont blockquote {
+  padding: 5px;
+  /* line-height: 1.2;
+  font-family: ff.$fontFam; */
+}
+ul.logo {
+  margin-right: auto;
+}
+
+@-webkit-keyframes Load-Img {
+  from {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  to {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+@keyframes Load-Img {
+  from {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  to {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+@media only screen and (max-width: 630px) {
+  header nav {
+    display: none;
+  }
+}
+
+img.menu {
+  display: none;
+  width: 25px;
+  cursor: pointer;
+  display: none;
+}
+@media only screen and (max-width: 630px) {
+  img.menu {
+    display: block;
+  }
+}
+
+.neat {
+  transform: translateX(0) !important;
+}
+
+div.cover {
+  position: fixed;
+  transform: translateY(-100%);
+  transition: transform 450ms ease;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  background: hsla(0deg, 0%, 0%, 0.94);
+  width: 100%;
+  z-index: 999;
+  text-align: center;
+}
+div.cover ul.elem {
+  list-style: none;
+  margin-block: 40vh;
+}
+div.cover ul.elem li {
+  display: block;
+  margin: 2em 0;
+  transform: translateX(100vw);
+  transition: transform 450ms ease;
+}
+div.cover ul.elem li a {
+  display: block;
+}
+
+div.cover > ul.elem > li:nth-child(1) {
+  transition-delay: 0.3s;
+}
+
+div.cover > ul.elem > li:nth-child(2) {
+  transition-delay: 0.4s;
+}
+
+div.cover > ul.elem > li:nth-child(3) {
+  transition-delay: 0.5s;
+}
+
+div.cover > ul.elem > li:nth-child(4) {
+  transition-delay: 0.6s;
+}
+
+/* header  nav {
+    @include breakpoints {
+       background: black;
+       height: 100vh;
+       position: fixed;
+       display: grid;
+       grid-auto-flow: column;
+       justify-content: center;
+       align-items: center;
+       z-index: 2 !important;
+       top: 0;
+       right: 0;
+       padding: 1em;
+       width: 40%;
+       order: 1;
+
+    }
+
+    ul {
+        li {
+            @include breakpoints {
+                display: block;
+                margin: 2em;
+            }
+            a{
+                @include breakpoints {
+
+                }
+            }
+        }
+    }
+
+} */
+:root {
+  --h1-col: #1EBCCE;
+  --header-bg: rgb(255, 255, 255);
+  --body-bg: #fdfdfd;
+}
+
+h1 {
+  color: var(--h1-col);
+  cursor: pointer;
+  font-family: TT Squares;
+  font-size: var(--lg-f-size);
+}
+h1::first-letter {
+  color: turquoise;
+}
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+body {
+  background: var(--body-bg);
+  margin: 0 auto;
+}
+@media only screen and (min-width: 1200px) {
+  body {
+    max-width: 1200px;
+  }
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="173" height="116" viewBox="0 0 173 116">
+  <g id="Rectangle_9" data-name="Rectangle 9" fill="#1EBCCE" stroke="#ffffff" stroke-width="4">
+    <rect width="173" height="116" rx="27" stroke="none"/>
+    <rect x="1.5" y="1.5" width="170" height="113" rx="25.5" fill="none"/>
+  </g>
+  <g id="Rectangle_10" data-name="Rectangle 10" transform="translate(90 26)" fill="#1EBCCE" stroke="#ffffff" stroke-width="4">
+    <rect width="70" height="21" rx="10" stroke="none"/>
+    <rect x="0.5" y="0.5" width="69" height="20" rx="9.5" fill="none"/>
+  </g>
+  <g id="Ellipse_1" data-name="Ellipse 1" transform="translate(18 26)" fill="#1EBCCE" stroke="#ffffff" stroke-width="4">
+    <ellipse cx="8.5" cy="10.5" rx="8.5" ry="10.5" stroke="none"/>
+    <ellipse cx="8.5" cy="10.5" rx="8" ry="10" fill="none"/>
+  </g>
+  <g id="Ellipse_2" data-name="Ellipse 2" transform="translate(35 26)" fill="#1EBCCE" stroke="#ffffff" stroke-width="4">
+    <ellipse cx="8.5" cy="10.5" rx="8.5" ry="10.5" stroke="none"/>
+    <ellipse cx="8.5" cy="10.5" rx="8" ry="10" fill="none"/>
+  </g>
+  <g id="Ellipse_3" data-name="Ellipse 3" transform="translate(52 26)" fill="#1EBCCE" stroke="#ffffff" stroke-width="4">
+    <ellipse cx="8.5" cy="10.5" rx="8.5" ry="10.5" stroke="none"/>
+    <ellipse cx="8.5" cy="10.5" rx="8" ry="10" fill="none"/>
+  </g>
+</svg>

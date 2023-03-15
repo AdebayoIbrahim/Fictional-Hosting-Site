@@ -1,0 +1,69 @@
+@mixin Displays {
+    display: flex;
+    justify-content: flex-end;
+    //align-items: center;
+    
+}
+
+@mixin Hero( $top, $gap) {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    // flex-flow: column $gap;
+    top: $top;
+    gap: $gap
+}
+
+@mixin HEADER($bg,$pad) {
+    background: $bg;
+    padding: $pad;
+}
+
+$ease-time: 450ms;
+
+@mixin trans-ease {
+    -webkit-transition: transform #{$ease-time} ease;
+    -moz-transition: transform #{$ease-time} ease;
+    -o-transition: transform #{$ease-time} ease;
+    transition: transform #{$ease-time} ease;
+    // transform-origin: top;
+}
+
+@mixin Animie ($laod, $time, $fillmode ,$tmfunc) {
+    -webkit-animation: $laod $time $fillmode $tmfunc;
+    -moz-animation: $laod $time $fillmode $tmfunc;
+    -o-animation: $laod $time $fillmode $tmfunc;
+    animation: $laod $time $fillmode $tmfunc;
+}
+
+@mixin textAnimate ($laod, $time, $fillmode ,$tmfunc, $delay) {
+    -webkit-animation: $laod $time $fillmode $tmfunc $delay;
+    -moz-animation: $laod $time $fillmode $tmfunc $delay;
+    -o-animation: $laod $time $fillmode $tmfunc $delay;
+    animation: $laod $time $fillmode $tmfunc $delay;
+}
+
+$mobile: 630px;
+
+@mixin breakpoints {
+    @media only screen and (max-width:#{$mobile}) {
+        @content;
+    }
+}
+
+$static: 1200px;
+
+@mixin bodyclamp {
+    @media only screen and (min-width: #{$static}) {
+        @content;
+    }
+}
+//   error mixins
+
+/* @mixin delay {
+    -webkit-transition-delay: ($i * 0.12s) + 0.2s;
+    -moz-transition-delay: ($i * 0.12s) + 0.2s;
+    -o-transition-delay: ($i * 0.12s) + 0.2s;
+    transition-delay: ($i * 0.12s) + 0.2s;
+} */

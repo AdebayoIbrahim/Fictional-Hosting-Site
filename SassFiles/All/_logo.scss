@@ -1,0 +1,19 @@
+@use  '../Fonts' as lg;
+@import "Colors";
+
+h1 {
+    color: var(--h1-col);
+    cursor: lg.$point;
+
+    font: {
+        //style: var(--h1-style);
+        family: lg.$logo-font;
+        size: var(--lg-f-size);
+    }
+
+    &::first-letter {
+        color: turquoise;
+    }
+    
+}
+

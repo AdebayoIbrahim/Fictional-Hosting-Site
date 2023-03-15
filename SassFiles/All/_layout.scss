@@ -1,0 +1,252 @@
+@use '../Fonts' as ff;
+@use 'generals' as *;
+@use   'Colors' as *;
+$margin: 16px;
+$img_width: 400px;
+$her-gap: 1.2em;
+$mobileheight: 100vh;
+$width-mob: 50%;
+
+
+
+body {
+
+    
+
+    font: {
+        family: ff.$fontFam;
+    }
+
+
+    header {
+        @include HEADER(var(--header-bg),var(--head-pad));
+        @include Displays;
+        position: sticky;
+        top: 0;
+        z-index: 999;
+    }
+    
+    
+
+    
+
+    ul {
+        list-style: none;
+        
+        li {
+            position: relative;
+            display: inline;
+            margin: $margin;
+            
+            
+
+            a {
+                text-decoration: none;
+                color: $linkColor;
+                transition: all 200ms ease;
+                font-size: ff.$fontSize;
+
+                &:hover {
+                    color: $hovLink;
+                    // font-weight: bold;
+                }
+            }
+        }
+    }
+
+    div.hero-img {
+        @include Hero(ff.$img-top, $her-gap);
+        
+
+        img.cent {
+            z-index: -2;
+            width: clamp(calc($img_width - 6em),calc($img_width + 4em),map-get(ff.$font-sizes, "max-width"));
+            @include Animie(Load-Img, 3s, forwards, linear);
+            
+        }
+
+        img.stream {
+            width: calc(40px + 3em);
+        }
+    }
+
+    
+    section.tasks {
+        background:  var(--h1-col);
+        margin-top: 6em;
+        
+        // height: 100%;
+        // clip-path: polygon(100% 0, 100% 82%, 45% 100%, 0 100%, 0 0);
+        width: 100%;
+        @include bodyclamp {
+            border-radius: 2em;
+        }
+        
+
+        div.grid_cont {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            column-gap: 1.3em;
+            row-gap: 5em;
+            padding-top: calc(40px + 2em);
+            padding-bottom: calc(40px + 2em);
+        }
+
+        div.first-Cont {
+            // background: var(--h1-col);
+            border-radius: 20px;
+            width: 300px;
+            position: relative;
+            color: #fff;
+            
+
+            @include breakpoints {
+                width: 40%;
+                
+            }
+
+            &:before {
+                content:  '';
+                position: absolute;
+                background: url(/image/after_bg.svg);
+                background-size: 100% 100%;
+                text-align: center;
+                width: 50px;
+                height: 50px;
+                top: -25px;
+                left: 50%;
+                right: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            blockquote {
+                padding: 5px;
+                /* line-height: 1.2;
+                font-family: ff.$fontFam; */ 
+            }
+        }
+
+        div.sec-Cont,div.thrd-Cont {
+            @extend .first-Cont;
+           
+        }
+    }
+    
+    
+}
+ul.logo {
+    margin-right: auto;
+
+    
+}
+
+@keyframes Load-Img {
+    
+    from {
+        clip-path: polygon(0 0, 100% 0, 100% 0 , 0 0);
+    }
+
+    to {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100% );
+    }
+
+
+    
+}
+
+
+header nav {
+    @include breakpoints {
+        display: none;
+    }
+}
+
+img.menu {
+
+    display: none;;
+    width: 25px;
+    cursor: pointer;
+    display: none;
+    
+    @include breakpoints {
+        display: block;
+    }
+}
+
+.neat {
+    transform: translateX(0) !important;
+}
+
+div.cover {
+    position:fixed;
+    transform: translateY(-100%);
+    @include trans-ease;
+    top: 0;
+    right: 0;
+    height: $mobileheight;
+    background: $mobile-col;
+    width: calc($width-mob * 2);
+    z-index: 999;
+    text-align: center;
+
+    ul.elem {
+        list-style: none;
+        margin-block: 40vh;
+
+        li {
+            
+            display: block;
+            margin: 2em 0;
+            transform: translateX(100vw);
+            @include trans-ease;
+
+            a {
+                display: block;
+            }
+            
+        }
+    }
+}
+
+
+@for $i from 1 through 4 {
+    div.cover > ul.elem > li:nth-child(#{$i}) {
+        transition-delay: ($i * 0.1s) + 0.2s;
+    }
+}
+
+/* header  nav {
+    @include breakpoints {
+       background: black;
+       height: 100vh;
+       position: fixed;
+       display: grid;
+       grid-auto-flow: column;
+       justify-content: center;
+       align-items: center;
+       z-index: 2 !important;
+       top: 0;
+       right: 0;
+       padding: 1em;
+       width: 40%;
+       order: 1;
+       
+    }
+
+    ul {
+        li {
+            @include breakpoints {
+                display: block;
+                margin: 2em;
+            }
+            a{
+                @include breakpoints {
+                    
+                }
+            }
+        }
+    }
+    
+} */

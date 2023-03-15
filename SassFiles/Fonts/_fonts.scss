@@ -1,0 +1,100 @@
+@use '../All/generals' as anim-mixins;
+$fontFam: 'Arial', Menlo;
+$img-top: calc(6em + .2em);
+$point: pointer;
+$fontSize: 1.12rem;
+$logo-font: TT Squares;
+
+$font-sizes: (
+    "small" :25px,
+    "family": Arial,
+    "align": center,
+    "max-width": calc(400px + 3vw),
+    "ff_weight": calc(220 + 250)
+);
+
+:root {
+    --head-pad: calc(1em + .25em);
+    --lg-f-size: 1.4em;
+    --h1-style: italic;
+}
+
+@function family($fam-name) {
+    @return map-get($font-sizes, $fam-name)
+}
+ 
+h3 {
+
+    text-align: family("align");
+    letter-spacing: 2px;
+    
+    font: {
+        size: family("small");
+        family: family("family");
+        weight: family("ff_weight")
+
+    }
+
+    &:before {
+        // animation: txtload 3s forwards ease 3s;
+        @include anim-mixins.textAnimate(txtload, 3s, forwards, ease, 3s);
+        content: ''; 
+        @extend h3;
+        // font-weight: inherit;
+    }
+}
+
+.show-cover {
+    transform: translateY(0%) !important;
+}
+
+p,blockquote {
+    text-align: map-get($font-sizes, "align");
+    word-spacing: 3px;
+    font-family:  'Lucida Sans Regular',Verdana, sans-serif;
+}
+
+
+@keyframes txtload {
+    5% {content: 'W'}
+    10% {content: 'We'}
+    15% {content: 'Web'}
+    20% {content: 'Web'}
+    25% {content: 'Web H'}
+    30% {content: 'Web Ho'}
+    35% {content: 'Web Hos'}
+    40% {content: 'Web Host'}
+    45% {content: 'Web Hosti'}
+    50% {content: 'Web Hostin'}
+    53% {content: 'Web Hosting'}
+    56% {content: 'Web Hosting F'}
+    59% {content: 'Web Hosting Fo'}
+    62% {content: 'Web Hosting For'}
+    65% {content: 'Web Hosting For T'}
+    68% {content: 'Web Hosting For Th'}
+    71% {content: 'Web Hosting For The'}
+    74% {content: 'Web Hosting For The M'}
+    77% {content: 'Web Hosting For The Mo'}
+    80% {content: 'Web Hosting For The Mod'}
+    83% {content: 'Web Hosting For The Mode'}
+    85% {content: 'Web Hosting For The Moder'}
+    88% {content: 'Web Hosting For The Modern'}
+    91% {content: 'Web Hosting For The Modern E'}
+    95% {content: 'Web Hosting For The Modern Er'}
+    100% {content: 'Web Hosting For The Modern Era'}
+}
+
+
+img.close {
+    position: absolute;
+    right: 40px;
+    top: 15px;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+
+    &:hover {
+        background: #3d3e41;
+        
+    }
+}
